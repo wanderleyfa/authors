@@ -79,7 +79,9 @@ $app->configure('app');
 // $app->routeMiddleware([
 //     'auth' => App\Http\Middleware\Authenticate::class,
 // ]);
-
+$app->routeMiddleware([
+    'auth' => App\Http\Middleware\Auth0Middleware::class,
+]);
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers
